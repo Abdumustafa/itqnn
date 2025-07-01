@@ -25,11 +25,16 @@ class _HomeScreenState extends State<HomeScreen> {
       key: _scaffoldKey,
       backgroundColor: Colors.white,
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.blue,
-        onPressed: () {
-          // Add action here
-        },
-        child: const Icon(Icons.star, color: Colors.white),
+        onPressed: () {},
+        backgroundColor: Colors.white,
+        child: ClipOval(
+          child: Image.asset(
+            "assets/images/icon_app/Group 9.png",
+            width: 80,
+            height: 80,
+            fit: BoxFit.cover,
+          ),
+        ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: CustomBottomNavBar(
@@ -93,19 +98,45 @@ class _HomeScreenState extends State<HomeScreen> {
             const SizedBox(height: 10),
             SearchBox(controller: searchController),
             Image.asset("assets/images/login/home.png"),
-            const Padding(
-              padding: EdgeInsets.all(16.0),
-              child: Text(
-                "إتقان شركائك لتحقيق أعلى معايير الأداء والكفاءة...",
-                textAlign: TextAlign.right,
-                style: TextStyle(fontSize: 16),
+            Padding(
+              padding: EdgeInsets.only(
+                right: 16.0,
+                left: 16.0,
+                top: 16.0,
+              ),
+              child: RichText(
+                textAlign: TextAlign.center,
+                text: TextSpan(
+                  style: TextStyle(fontSize: 16, color: Colors.black),
+                  children: [
+                    TextSpan(
+                      text: "إتقان ",
+                      style: TextStyle(
+                          color: Colors.orange, fontWeight: FontWeight.w900),
+                    ),
+                    TextSpan(
+                      text:
+                          "شريكك لتحقيق أعلى معايير الأداء والكفاءة نحو تطوير أكثر سهولة وكفاءة ويقدم لك الحلول المتكاملة لتدريب فريقك وتعزيز نجاحك.",
+                      style: TextStyle(
+                        fontSize: 16,
+                        color: const Color(0xff023047),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
-            const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 16.0),
+            Padding(
+              padding: const EdgeInsets.only(right: 16),
               child: ElevatedButton(
-                onPressed: null,
-                child: Text("تصفح الآن"),
+                onPressed: () {},
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: const Color(0xff023047),
+                ),
+                child: const Text(
+                  "تصفح الآن",
+                  style: TextStyle(color: Colors.white),
+                ),
               ),
             ),
             const SizedBox(height: 24),
