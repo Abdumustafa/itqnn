@@ -10,7 +10,22 @@ class SideMenuCompany extends StatelessWidget {
     return Drawer(
       child: ListView(
         children: [
-          const DrawerHeader(child: Text("شركة")),
+          const DrawerHeader(
+              child: Row(
+            // mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              CircleAvatar(
+                radius: 20,
+                backgroundImage:
+                    AssetImage("assets/images/icon_app/Group 9.png"),
+              ),
+              SizedBox(width: 10),
+              Text(
+                "اسم الشركة",
+                style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
+              ),
+            ],
+          )),
           const ListTile(title: Text("لوحة التحكم")),
           const ListTile(title: Text("طلبات الموظفين")),
           const ListTile(title: Text("المدربين")),

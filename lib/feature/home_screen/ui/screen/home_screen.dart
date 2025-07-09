@@ -45,7 +45,7 @@ class _HomeScreenState extends State<HomeScreen> {
           });
         },
       ),
-      drawer: widget.user.type == UserType.company
+      drawer: widget.user.type == UserType.employee
           ? const SideMenuCompany()
           : const SideMenuEmployee(),
       appBar: AppBar(
