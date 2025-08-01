@@ -47,7 +47,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
               child: SingleChildScrollView(
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16),
-                  child: isCompany ? const CompanyForm() : const EmployeeForm(),
+                  child: isCompany ?  CompanyForm() :  EmployeeForm(),
                 ),
               ),
             )
@@ -56,7 +56,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
       ),
     );
   }
-
   Widget buildOptionButton({
     required String title,
     required bool selected,

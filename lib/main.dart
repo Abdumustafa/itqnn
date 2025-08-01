@@ -3,7 +3,7 @@ import 'package:itqan/core/services/services.dart';
 import 'package:itqan/itqan_app.dart';
 
 void main()async {
-   WidgetsFlutterBinding.ensureInitialized();
+  WidgetsFlutterBinding.ensureInitialized();
   await initialServices();
   runApp(ItqanApp());
 }

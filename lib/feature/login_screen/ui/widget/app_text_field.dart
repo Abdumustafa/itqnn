@@ -9,7 +9,7 @@ class AppTextField extends StatefulWidget {
     super.key,
     required this.textEditingController,
     required this.labelText,
-    this.suffixIcon,
+    this.suffixIcon, required bool obscureText,
   });
 
   final String labelText;
